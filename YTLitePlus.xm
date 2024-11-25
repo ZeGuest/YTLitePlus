@@ -35,24 +35,6 @@ static NSString *accessGroupID() {
 
 # pragma mark - Tweaks
 
-// Activate FLEX
-%hook YTAppDelegate
-- (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions {
-    BOOL didFinishLaunching = %orig;
-	if (IsEnabled(@"flex_enabled")) {
-        [[%c(FLEXManager) performSelector:@selector(sharedManager)] performSelector:@selector(showExplorer)];
-    }
-    return didFinishLaunching;
-}
-- (void)appWillResignActive:(id)arg1 {
-    %orig;
-	if (IsEnabled(@"flex_enabled")) {
-        [[%c(FLEXManager) performSelector:@selector(sharedManager)] performSelector:@selector(showExplorer)];
-    }
-}
-%end
-
 // Enable Alternate Icons
 %hook UIApplication
 - (BOOL)supportsAlternateIcons {
