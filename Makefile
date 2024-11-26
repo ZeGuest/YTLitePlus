@@ -25,7 +25,7 @@ YTLitePlus_USE_FISHHOOK = 0
 
 include $(THEOS)/makefiles/common.mk
 include $(THEOS_MAKE_PATH)/tweak.mk
-SUBPROJECTS +=  Tweaks/YouPiP Tweaks/Return-YouTube-Dislikes Tweaks/YTABConfig Tweaks/DontEatMyContent Tweaks/YTVideoOverlay Tweaks/YouQuality Tweaks/YouGroupSettings Tweaks
+SUBPROJECTS +=  Tweaks/YouPiP Tweaks/Return-YouTube-Dislikes Tweaks/YTABConfig Tweaks/DontEatMyContent Tweaks/YTVideoOverlay Tweaks/YouQuality Tweaks/YouGroupSettings
 include $(THEOS_MAKE_PATH)/aggregate.mk
 
 YTLITE_PATH = Tweaks/YTLite
